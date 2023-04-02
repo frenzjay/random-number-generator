@@ -1,0 +1,49 @@
+
+<html>
+<head>
+<style>
+body {
+  background-color: lightblue;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+}
+
+p {
+  font-size: 48px;
+  color: darkblue;
+  text-align: center;
+  transition: transform 0.5s;
+}
+
+button {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 20px;
+  font-size: 24px;
+  border: none;
+  border-radius: 10px;
+  background-color: green;
+  color: white;
+}
+</style>
+<script>
+function generateRandomNumber() {
+  var randomNumber = Math.floor(Math.random() * 100) + 1;
+  document.getElementById("randomNumber").innerHTML = randomNumber;
+  document.getElementById("randomNumber").style.transform = "scale(1.5)";
+  setTimeout(function() {
+    document.getElementById("randomNumber").style.transform = "scale(1)";
+  }, 500);
+}
+</script>
+</head>
+<body>
+<h1>Random Number Generator</h1>
+<p id="randomNumber">?</p>
+<button onclick="generateRandomNumber()">Generate</button>
+</body>
+</html>
